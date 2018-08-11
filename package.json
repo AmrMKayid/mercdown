@@ -1,6 +1,7 @@
 {
   "name": "mercdown",
   "version": "0.1.0",
+  "main": "public/main.js",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
@@ -9,6 +10,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "electron-start": "electron .",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
