@@ -1,8 +1,11 @@
 {
   "name": "mercdown",
   "version": "0.1.0",
-  "main": "public/main.js",
+  "author": "Amr M. Kayid",
+  "description": "Markdown app using electron and react",
   "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
   "dependencies": {
     "electron-is-dev": "^0.3.0",
     "react": "^16.4.2",
@@ -16,7 +19,7 @@
     "eject": "react-scripts eject",
     "electron-start": "electron .",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --em.main=build/main.js",
+    "electron-pack": "build --c.extraMetadata.main=build/electron.js",
     "preelectron-pack": "yarn build"
   },
   "devDependencies": {
@@ -26,7 +29,7 @@
     "wait-on": "^2.1.0"
   },
   "build": {
-    "appId": "com.mercdown",
+    "appId": "com.amrmkayid.mercdown",
     "files": [
       "build/**/*",
       "node_modules/**/*"
