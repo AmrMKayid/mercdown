@@ -105,6 +105,9 @@ fabric.properties
 # production
 /build
 
+# Dist
+/dist
+
 # misc
 .DS_Store
 .env.local
