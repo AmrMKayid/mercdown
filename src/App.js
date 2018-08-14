@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import './App.css';
 
 import SplitPane from 'react-split-pane';
+import ReactMarkdown from 'react-markdown';
+
+
 import Editor from './editor';
 
 
@@ -25,7 +28,9 @@ class App extends Component {
                         <Editor className="editor" value={this.state.markdownSrc}/>
                     </div>
 
-                    <div className={"view-pane"}></div>
+                    <div className={"view-pane"}>
+                        <ReactMarkdown className="result" source={this.state.markdownSrc} />
+                    </div>
                 </SplitPane>
             </div>
         );
