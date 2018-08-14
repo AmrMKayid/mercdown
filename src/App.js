@@ -17,6 +17,15 @@ class App extends Component {
         this.state = {
             markdownSrc: "# Hello World",
         }
+
+        this.onMarkdownChange = this.onMarkdownChange.bind(this);
+
+    }
+
+    onMarkdownChange(md) {
+        this.setState({
+            markdownSrc: md
+        });
     }
 
 
@@ -25,11 +34,11 @@ class App extends Component {
             <div className="App">
                 <SplitPane split="vertical" defaultSize="50%">
                     <div className={"editor-pane"}>
-                        <Editor className="editor" value={this.state.markdownSrc}/>
+                        <Editor className="editor" value={this.state.markdownSrc} onChange={this.onMarkdownChange}/>
                     </div>
 
                     <div className={"view-pane"}>
-                        <ReactMarkdown className="result" source={this.state.markdownSrc} />
+                        <ReactMarkdown className="result" source={this.state.markdownSrc}/>
                     </div>
                 </SplitPane>
             </div>

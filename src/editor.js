@@ -13,12 +13,12 @@ class Editor extends Component {
     constructor(props) {
         super(props);
 
-        // this.updateCode = this.updateCode.bind(this);
+        this.updateCode = this.updateCode.bind(this);
     }
 
-    // updateCode(e) {
-    //     this.props.onChange(e);
-    // }
+    updateCode(e) {
+        this.props.onChange(e);
+    }
 
     render() {
         var options = {
@@ -27,7 +27,8 @@ class Editor extends Component {
         }
         return (
             <CodeMirror
-                value={this.props.value} options={options} height="100%"
+                value={this.props.value} onChange={this.updateCode}
+                options={options} height="100%"
             />
         );
     }
