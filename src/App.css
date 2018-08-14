@@ -1,5 +1,5 @@
 .App {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .App-logo {
@@ -29,6 +29,25 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/*
+stretch the editor to full height
+and add a little padding to the right side of the text
+*/
+.editor-pane {
+    height: 100%;
+}
+
+.CodeMirror {
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.ReactCodeMirror {
+    height: 100%;
 }
 
 .Resizer {
